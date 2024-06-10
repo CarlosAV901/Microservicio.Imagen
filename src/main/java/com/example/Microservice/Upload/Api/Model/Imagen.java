@@ -9,6 +9,7 @@ public class Imagen {
     private String id;
     private String nombre;
     private byte[] datos;
+    private String AutorGuid;
 
     //Getters y Setters
     public String getId() {
@@ -33,5 +34,13 @@ public class Imagen {
 
     public void setDatos(byte[] datos) {
         this.datos = datos;
+    }
+
+    public String getAutorGuid() {
+        return AutorGuid;
+    }
+
+    public void setAutorGuid(String autorGuid) {
+        AutorGuid = autorGuid;
     }
 }

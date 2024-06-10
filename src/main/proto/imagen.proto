@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package com.example.grpc.server.imagen;
+option java_outer_classname = "ImagenProto";
+option csharp_namespace = "Api.Microservice.Upload.Proto";
+
+message ImagenRequest{
+  bytes data = 1;
+  string guid = 2;
+}
+
+message ImagenResponse{
+  string mensaje = 1;
+  string AutorGuid = 2;
+}
+
+
+service ImagenServiceGrpc {
+  rpc SubirImagen (ImagenRequest) returns (ImagenResponse);
+}
